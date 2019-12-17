@@ -1,0 +1,4 @@
+/* components/my-cpn.wxss */
+.input {
+  border: 2rpx solid red;
+}

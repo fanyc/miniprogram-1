@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "my-cpn": "/components/my-cpn/my-cpn",
+    "my-tab-ctrl": "/components/my-tab-ctrl/my-tab-ctrl"
+  }
+}

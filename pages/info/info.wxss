@@ -1,0 +1,9 @@
+/* pages/info/info.wxss */
+@import "./styles/box.wxss";
+
+.scrollview {
+  width: 740rpx;
+  height: 240rpx;
+  white-space: nowrap;
+  background-color: gray;
+}
