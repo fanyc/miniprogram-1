@@ -1,4 +1,6 @@
 <!--components/my-cpn.wxml-->
-<view class="label" wx:for="{{list}}" wx:key="{{item}}">{{item}}</view>
+<block wx:for="{{list}}" wx:key="index">
+  <view class="label">{{item}}</view>
+</block>
 <input class="input" bindinput="oninput"></input>
 <button bindtap="ontap">确定</button>
