@@ -1,25 +1,19 @@
-// pages/info/info.js
+// pages/detail/detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    val: "aaabbbc",
-    cnt: 0,
-    page: "普通",
-    // 组件所需的参数
-    nvabarData: {
-      showCapsule: 1, //是否显示左上角图标   1表示显示    0表示不显示
-      title: '我的主页', //导航栏 中间的标题
-    }
+    id: 0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options);
+    this.setData(options);
   },
 
   /**
@@ -69,25 +63,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  btn_click: function() {
-    console.log(this.data.cnt)
-    this.setData({
-      cnt: this.data.cnt + 1
-    })
-  },
-  oncommit: function(event) {
-    console.log(event);
-  },
-  tabitem_selected: function(event) {
-    console.log("tabitem_selected", event);
-    this.setData({
-      page: event.detail.name
-    });
-  },
-  backToTop: function(e) {
-    wx.pageScrollTo({
-      scrollTop: 0,
-    });
   }
 })

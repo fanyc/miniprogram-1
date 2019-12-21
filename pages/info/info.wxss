@@ -7,3 +7,23 @@
   white-space: nowrap;
   background-color: gray;
 }
+
+.block {
+  width: 200rpx;
+  height: 200rpx;
+  text-align: center;
+  line-height: 200rpx;
+  background-color: yellow;
+  margin: 10rpx;
+}
+
+.backToTop {
+  position: fixed;
+  bottom: 10rpx;
+  right: 10rpx;
+  background-color: red;
+  width: 80rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+}

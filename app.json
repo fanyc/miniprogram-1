@@ -2,13 +2,18 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/info/info"
+    "pages/info/info",
+    "pages/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "HELLO",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "usingComponents": {
+    "nav-bar": "/components/nav-bar/nav-bar"
   },
   "tabBar": {
     "list": [

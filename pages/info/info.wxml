@@ -1,22 +1,27 @@
 <!--pages/info/info.wxml-->
 <!-- <text>pages/info/info.wxml</text> -->
-<text> {{val}} </text>
-<scroll-view class="scrollview" scroll-x>
-  <view class="box" wx:for="{{['aa', 'bb', 'cc', 'dd', 'ee', 'ff', 'gg']}}" wx:key="index">
-    <view class="boxcontent">item_{{item}}_{{index}}</view>       
+<nav-bar title="信息"></nav-bar>
+<view class="container">
+  <text> {{val}} </text>
+  <scroll-view class="scrollview" scroll-x>
+    <view class="box" wx:for="{{['aa', 'bb', 'cc', 'dd', 'ee', 'ff', 'gg']}}" wx:key="index">
+      <view class="boxcontent">item_{{item}}_{{index}}</view>       
+    </view>
+  </scroll-view>
+
+  <button bindtap="btn_click">确定{{cnt}}</button>
+  <my-cpn bind:commit="oncommit"/>
+
+  <view class="box">
+    <view class="boxcontent">item_aa_0</view>
   </view>
-</scroll-view>
 
-<button bindtap="btn_click">确定{{cnt}}</button>
-<my-cpn bind:commit="oncommit"/>
+  <my-tab-ctrl list="{{['普通', '精良', '史诗']}}" bind:item_selected="tabitem_selected"/>
+  <view style="margin: 100rpx;">页面：{{page}}</view>
 
-<view class="box">
-  <view class="boxcontent">item_aa_0</view>
+  <!-- wxs只支持相对路径 -->
+  <wxs src="../../wxs/utils.wxs" module="utils" />
+  <text>{{utils.double(2)}}</text>
+  <block wx:for="{{20}}"><view class="block">测试</view></block>
+  <view class="backToTop" bind:tap="backToTop">点击</view>
 </view>
-
-<my-tab-ctrl list="{{['普通', '精良', '史诗']}}" bind:item_selected="tabitem_selected"/>
-<view style="margin: 100rpx;">页面：{{page}}</view>
-
-<!-- wxs只支持相对路径 -->
-<wxs src="../../wxs/utils.wxs" module="utils" />
-<text>{{utils.double(2)}}</text>

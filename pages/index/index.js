@@ -7,7 +7,7 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
   },
   //事件处理函数
   bindViewTap: function() {
@@ -53,7 +53,7 @@ Page({
   },
   goto: function(e) {
     wx.navigateTo({
-      url: '../logs/logs?id=1',
+      url: '../detail/detail?id=1',
       complete: function() {
         console.log('wx.navigateTo complete.');
       }
